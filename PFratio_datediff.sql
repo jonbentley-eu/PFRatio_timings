@@ -27,7 +27,7 @@ SELECT
 FROM
 	DAR.PatientAssessment AS a
 	JOIN DAR.D_Encounter AS e
-		a.encounterId = e.encounterId
+		ON a.encounterId = e.encounterId
 WHERE
 	a.utcChartTime >'2024/01/01' 
 	AND a.utcChartTime < '2024/03/31'
