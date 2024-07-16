@@ -34,5 +34,4 @@ WHERE
 	AND a.clinicalUnitId IN ('53', '54')
 	AND a.attributePropName = ('PO2FIO2_RatioMsmnt')
 	AND a.valueNumber < '23.2'
-	AND LAG(utcChartTime) OVER (ORDER BY utcChartTime) > '360'
 ORDER BY a.encounterId, utcChartTime
